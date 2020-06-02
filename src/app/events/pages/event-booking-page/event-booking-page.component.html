@@ -1,0 +1,14 @@
+<div class="event-booking-page">
+  <mat-card class="event-card">
+    <div style="text-align: center;">
+      <mat-card-header>
+        <mat-card-title><h2 class="event-booking-page__heading">{{ event.name }}</h2></mat-card-title>
+        <mat-card-subtitle><h4 class="event-booking-page__heading">Number of available seats : {{ event.seatsAvailable }}</h4></mat-card-subtitle>
+      </mat-card-header>
+    </div>
+    <mat-card-content>
+      <div style="float: left; margin: 10px;"><img mat-card-md-image src="https://images.unsplash.com/{{event.imageSlug}}?fit=crop&w=300&q=80" alt="Photo of {{event.name}}"></div>
+      <app-event-booking-form [event]="event"></app-event-booking-form>
+    </mat-card-content>
+  </mat-card>
+</div>
